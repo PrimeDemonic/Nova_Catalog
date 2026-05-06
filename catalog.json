@@ -1,5 +1,19 @@
 {
-  "$schemaVersion": 1,
+  "$schemaVersion": 2,
+  "sdkBundles": [
+    {
+      "id": "servicenow-sdk",
+      "displayName": "ServiceNow SDK (Fluent)",
+      "shortLabel": "SDK",
+      "description": "Bundled @servicenow/sdk + @servicenow/glide for authoring Flow Designer flows, Script Includes, ACLs, and more declaratively in TypeScript.",
+      "version": "4.6.0",
+      "glideVersion": "27.0.5",
+      "tarballUrl": "https://github.com/PrimeDemonic/RapiDev_MCP_Catalog/releases/download/sdk-v4.6.0/sdk-bundle-4.6.0.tgz",
+      "tarballSha256": "897c96ea7157634863ae66cb8d361bd6fe15a52b69deb3966c9c895e39dfa162",
+      "minimumGuiVersion": "3.1.0",
+      "targetReleaseFamily": "yokohama"
+    }
+  ],
   "servers": [
     {
       "id": "playwright",
