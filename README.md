@@ -1,6 +1,6 @@
-# RapiDev MCP Catalog
+# Nova MCP Catalog
 
-Public manifest + binaries for the **RapiDev Toolkit**'s MCP Catalog feature. The toolkit GUI fetches `catalog.json` from this repo at session start and once per 24 h to discover available MCP servers, version updates, and tarball download URLs.
+Public manifest + binaries for the **Nova Toolkit**'s MCP Catalog feature. The toolkit GUI fetches `catalog.json` from this repo at session start and once per 24 h to discover available MCP servers, version updates, and tarball download URLs.
 
 This repo is intentionally separate from the (private) toolkit source so consultant machines can fetch catalog state without GitHub credentials.
 
@@ -31,6 +31,6 @@ The toolkit's GUI fetcher honours a 24 h cache TTL, so changes here propagate to
 
 ## See also
 
-- Toolkit source (private): https://github.com/PrimeDemonic/Crossfuze_RapiDev_Toolkit
+- Toolkit source (private): https://github.com/PrimeDemonic/Nova_Toolkit
 - Catalog spec: `docs/specs/mcp-catalog.md` in the toolkit repo
 - User-facing docs: `docs/mcp-catalog.md` in the toolkit repo
