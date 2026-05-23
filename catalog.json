@@ -9,7 +9,7 @@
       "version": "4.7.0",
       "glideVersion": "27.0.5",
       "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.7.0/sdk-bundle-4.7.0.tgz",
-      "tarballSha256": "77ea4f9686f5d5d1138e2c3813c680cfcf61b92c231e76c891e1563a692d2cb8",
+      "tarballSha256": "9694ef6c86b10e1331d1125fb858e229cccee76b7702917d4a0a27aee148f4ca",
       "minimumGuiVersion": "3.1.0",
       "targetReleaseFamily": "yokohama"
     }
