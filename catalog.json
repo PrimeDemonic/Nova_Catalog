@@ -71,7 +71,7 @@
       "description": "Interactive 3D galaxy visualization for Sentinel discovery data. Renders tables, artifacts, and relationships as an explorable solar system â€” tables are suns, artifacts orbit as planets, edges are gravitational links. Requires Sentinel cache data (run discover_table_ecosystem first).",
       "version": "0.2.0",
       "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-galaxy-v0.2.0/nova-galaxy-viz-0.2.0.tgz",
-      "tarballSha256": "0d50edb24bdb78aaef3799064d4c9e244860624d9fd27a98122c2d401aa44422",
+      "tarballSha256": "9f87b91772b1992c7a9e7386acdf3da0d1b9116d307abe272f381e7ef70812d2",
       "mcpToolPrefix": "NovaGalaxy",
       "requiresConfig": true,
       "configSchema": {
