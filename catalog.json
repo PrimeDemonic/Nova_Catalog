@@ -62,6 +62,50 @@
         "Dashboard / Performance Analytics visualisation review",
         "Playbook UI validation"
       ]
+    },
+    {
+      "id": "nova-galaxy",
+      "displayName": "Nova Galaxy",
+      "shortLabel": "GX",
+      "description": "Interactive 3D galaxy visualization for Sentinel discovery data. Renders tables, artifacts, and relationships as an explorable solar system — tables are suns, artifacts orbit as planets, edges are gravitational links. Requires Sentinel cache data (run discover_table_ecosystem first).",
+      "version": "0.1.0",
+      "tarballUrl": "https://github.com/Nova-Toolkit/Nova-Releases/releases/download/v3.44.1/nova-galaxy-viz-0.1.0.tgz",
+      "tarballSha256": "83253b42c68402e5fc4259784e88241917e59ec05061e7dc11fb3378181c8c59",
+      "mcpToolPrefix": "NovaGalaxy",
+      "postInstallCommands": [
+        { "cmd": "npm", "args": ["install", "--production"] }
+      ],
+      "requiresConfig": true,
+      "configSchema": {
+        "bloomIntensity": {
+          "type": "select",
+          "options": ["off", "subtle", "medium", "intense"],
+          "default": "medium",
+          "label": "Bloom / glow intensity",
+          "description": "Controls the glow effect on nodes and particles"
+        },
+        "particleDensity": {
+          "type": "select",
+          "options": ["low", "medium", "high"],
+          "default": "medium",
+          "label": "Particle density",
+          "description": "Number of ambient particles. Lower for slower GPUs."
+        },
+        "cameraMode": {
+          "type": "select",
+          "options": ["orbit", "fly"],
+          "default": "orbit",
+          "label": "Default camera mode",
+          "description": "Orbit locks onto a focal point. Fly allows WASD free navigation."
+        }
+      },
+      "minimumGuiVersion": "3.44.0",
+      "useCases": [
+        "Exploring a ServiceNow instance's table ecosystem in 3D",
+        "Identifying configuration hotspots and sprawl visually",
+        "Presenting instance architecture to stakeholders",
+        "Comparing artifact density across tables"
+      ]
     }
   ]
 }
