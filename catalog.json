@@ -19,7 +19,7 @@
       "id": "playwright",
       "displayName": "Playwright",
       "shortLabel": "PW",
-      "description": "Drive a real browser for ServiceNow UI work â€” flow validation, workspace probing, portal smoke, dashboard verification, playbook UI checks. Per-project Chromium profile preserves saved passwords, history, and any persistent cookies (incl. SN 'Remember me' sessions when ticked at login).",
+      "description": "Drive a real browser for ServiceNow UI work — flow validation, workspace probing, portal smoke, dashboard verification, playbook UI checks. Per-project Chromium profile preserves saved passwords, history, and any persistent cookies (incl. SN 'Remember me' sessions when ticked at login).",
       "version": "0.0.73",
       "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.73/playwright-mcp-bundle-0.0.73.tgz",
       "tarballSha256": "74a9fe455a600116f98e8c13d36e2ad77cd63f679948314b9fe44e55a68b8cf4",
@@ -51,7 +51,7 @@
           "type": "path-relative-to-appdata",
           "default": "playwright-profiles/{projectId}",
           "label": "Browser profile folder",
-          "description": "Persistent Chromium profile per project. Preserves saved passwords, history, localStorage, and any cookies the server flags as persistent. SN's default session cookie is session-only â€” tick 'Remember me' at login if you want auth to survive browser close. Per-project keeps SN instance sessions isolated."
+          "description": "Persistent Chromium profile per project. Preserves saved passwords, history, localStorage, and any cookies the server flags as persistent. SN's default session cookie is session-only — tick 'Remember me' at login if you want auth to survive browser close. Per-project keeps SN instance sessions isolated."
         }
       },
       "minimumGuiVersion": "2.7.0",
@@ -68,10 +68,10 @@
       "displayName": "Nova Galaxy",
       "shortLabel": "GX",
       "category": "tool",
-      "description": "Interactive 3D galaxy visualization for Sentinel discovery data. Renders tables, artifacts, and relationships as an explorable solar system â€” tables are suns, artifacts orbit as planets, edges are gravitational links. Requires Sentinel cache data (run discover_table_ecosystem first).",
-      "version": "0.3.0",
-      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-galaxy-v0.3.0/nova-galaxy-viz-0.3.0.tgz",
-      "tarballSha256": "21bbc138ed39b74bcdda1cf8f846f906adcb381601038f0fb34089269fb8ee3a",
+      "description": "Interactive 3D galaxy visualization for Sentinel discovery data. Renders tables, artifacts, and relationships as an explorable solar system — tables are suns, artifacts orbit as planets, edges are gravitational links. Requires Sentinel cache data (run discover_table_ecosystem first).",
+      "version": "0.4.0",
+      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-galaxy-v0.4.0/nova-galaxy-viz-0.4.0.tgz",
+      "tarballSha256": "eb2ce4f5d8d2aea2f51c8fd3efffa53c49c930ce6c8e3efe1ea4cc0139a318b8",
       "mcpToolPrefix": "NovaGalaxy",
       "requiresConfig": true,
       "configSchema": {
