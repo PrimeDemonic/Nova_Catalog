@@ -11,7 +11,8 @@
       "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.8.0/sdk-bundle-4.8.0.tgz",
       "tarballSha256": "921b04ba0cb8bd34030ab7af692185a16389ea154fbaa1ead574ace2fe9543e1",
       "minimumGuiVersion": "3.1.0",
-      "targetReleaseFamily": "yokohama"
+      "targetReleaseFamily": "yokohama",
+      "releaseSummary": "Adds Fluent Playbooks (Process Automation Designer), outbound REST Messages, Connection & Credential Aliases with Alias Templates and Retry Policies, Data Lookups, and the Now.del() declarative-delete primitive. The Nova toolkit's agents and skills now use these — update the SDK so 4.8.0-only builds work."
     }
   ],
   "servers": [
