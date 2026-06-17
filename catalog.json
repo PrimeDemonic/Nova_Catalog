@@ -5,11 +5,11 @@
       "id": "servicenow-sdk",
       "displayName": "ServiceNow SDK (Fluent)",
       "shortLabel": "SDK",
-      "description": "Bundled @servicenow/sdk + @servicenow/glide for authoring Flow Designer flows, Script Includes, ACLs, and more declaratively in TypeScript.",
-      "version": "4.7.0",
+      "description": "Bundled @servicenow/sdk + @servicenow/glide for authoring Flow Designer flows, Playbooks, Script Includes, ACLs, REST Messages, Connection Aliases, and more declaratively in TypeScript.",
+      "version": "4.8.0",
       "glideVersion": "27.0.5",
-      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.7.0/sdk-bundle-4.7.0.tgz",
-      "tarballSha256": "9694ef6c86b10e1331d1125fb858e229cccee76b7702917d4a0a27aee148f4ca",
+      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.8.0/sdk-bundle-4.8.0.tgz",
+      "tarballSha256": "921b04ba0cb8bd34030ab7af692185a16389ea154fbaa1ead574ace2fe9543e1",
       "minimumGuiVersion": "3.1.0",
       "targetReleaseFamily": "yokohama"
     }
