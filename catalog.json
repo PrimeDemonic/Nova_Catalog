@@ -6,13 +6,13 @@
       "displayName": "ServiceNow SDK (Fluent)",
       "shortLabel": "SDK",
       "description": "Bundled @servicenow/sdk + @servicenow/glide for authoring Flow Designer flows, Playbooks, Script Includes, ACLs, REST Messages, Connection Aliases, and more declaratively in TypeScript.",
-      "version": "4.8.0",
+      "version": "4.8.1",
       "glideVersion": "27.0.5",
-      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.8.0/sdk-bundle-4.8.0.tgz",
-      "tarballSha256": "921b04ba0cb8bd34030ab7af692185a16389ea154fbaa1ead574ace2fe9543e1",
+      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.8.1/sdk-bundle-4.8.1.tgz",
+      "tarballSha256": "e6e58b089f1164b1a2f3487c64e03ad7b2283214f0442fbeb6377a3d4a8e5f2b",
       "minimumGuiVersion": "3.1.0",
       "targetReleaseFamily": "yokohama",
-      "releaseSummary": "Adds Fluent Playbooks (Process Automation Designer), outbound REST Messages, Connection & Credential Aliases with Alias Templates and Retry Policies, Data Lookups, and the Now.del() declarative-delete primitive. The Nova toolkit's agents and skills now use these — update the SDK so 4.8.0-only builds work."
+      "releaseSummary": "Maintenance patch over 4.8.0 — no new APIs, safe drop-in. Clears the known transitive-dependency security advisories (undici, tmp, @fastify/static, js-yaml, joi) and fixes several Flow/Action build bugs: snapshot churn on every rebuild, missing internal names, datapills inside Do-In-Parallel/Try-Catch, Choice input/output dropdown type, and post-install publish scope. Recommended for all SDK-enabled projects."
     }
   ],
   "servers": [
