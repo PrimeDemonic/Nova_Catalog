@@ -10,6 +10,12 @@
       "glideVersion": "27.0.5",
       "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.8.1/sdk-bundle-4.8.1.tgz",
       "tarballSha256": "e6e58b089f1164b1a2f3487c64e03ad7b2283214f0442fbeb6377a3d4a8e5f2b",
+      "tarballs": {
+        "darwin-arm64": {
+          "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.8.1/sdk-bundle-4.8.1-darwin-arm64.tgz",
+          "tarballSha256": "4e9e3f11a59e05e24561958227d48f2279dfc06b9ac75d478654b6204fbfcee9"
+        }
+      },
       "minimumGuiVersion": "3.1.0",
       "targetReleaseFamily": "yokohama",
       "releaseSummary": "Maintenance patch over 4.8.0 — no new APIs, safe drop-in. Clears the known transitive-dependency security advisories (undici, tmp, @fastify/static, js-yaml, joi) and fixes several Flow/Action build bugs: snapshot churn on every rebuild, missing internal names, datapills inside Do-In-Parallel/Try-Catch, Choice input/output dropdown type, and post-install publish scope. Recommended for all SDK-enabled projects."
@@ -24,6 +30,12 @@
       "version": "0.0.73",
       "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.73/playwright-mcp-bundle-0.0.73.tgz",
       "tarballSha256": "74a9fe455a600116f98e8c13d36e2ad77cd63f679948314b9fe44e55a68b8cf4",
+      "tarballs": {
+        "darwin-arm64": {
+          "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.73/playwright-mcp-bundle-0.0.73-darwin-arm64.tgz",
+          "tarballSha256": "94def82e022452a26c08bdcb5bbf0f8a031ac7aac4106cf2199c1fc70c9a7c39"
+        }
+      },
       "mcpToolPrefix": "Playwright",
       "postInstallCommands": [
         { "cmd": "node", "args": ["./bin/install-browser.js", "chromium"] }
@@ -73,6 +85,12 @@
       "version": "0.5.0",
       "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-galaxy-v0.5.0/nova-galaxy-viz-0.5.0.tgz",
       "tarballSha256": "72e8198ea5609c809a488ad1350b4f5047d8c6464430b6788419204df6a9d2c5",
+      "tarballs": {
+        "darwin-arm64": {
+          "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-galaxy-v0.5.0/nova-galaxy-viz-0.5.0.tgz",
+          "tarballSha256": "72e8198ea5609c809a488ad1350b4f5047d8c6464430b6788419204df6a9d2c5"
+        }
+      },
       "mcpToolPrefix": "NovaGalaxy",
       "requiresConfig": true,
       "configSchema": {
