@@ -6,19 +6,19 @@
       "displayName": "ServiceNow SDK (Fluent)",
       "shortLabel": "SDK",
       "description": "Bundled @servicenow/sdk + @servicenow/glide for authoring Flow Designer flows, Playbooks, Script Includes, ACLs, REST Messages, Connection Aliases, and more declaratively in TypeScript.",
-      "version": "4.8.1",
+      "version": "4.9.0",
       "glideVersion": "27.0.5",
-      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.8.1/sdk-bundle-4.8.1.tgz",
-      "tarballSha256": "e6e58b089f1164b1a2f3487c64e03ad7b2283214f0442fbeb6377a3d4a8e5f2b",
+      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.9.0/sdk-bundle-4.9.0.tgz",
+      "tarballSha256": "7df4a872c681008a418ad09f31fa8e69799c4bf4728c1dd6e0c3dc51335704aa",
       "tarballs": {
         "darwin-arm64": {
-          "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.8.1/sdk-bundle-4.8.1-darwin-arm64.tgz",
-          "tarballSha256": "4e9e3f11a59e05e24561958227d48f2279dfc06b9ac75d478654b6204fbfcee9"
+          "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.9.0/sdk-bundle-4.9.0-darwin-arm64.tgz",
+          "tarballSha256": "9e0ea4f1cbe8f3dd5635ed920298ea4e6e5da5b387e040bb3f65869717ed834f"
         }
       },
       "minimumGuiVersion": "3.1.0",
       "targetReleaseFamily": "yokohama",
-      "releaseSummary": "Maintenance patch over 4.8.0 — no new APIs, safe drop-in. Clears the known transitive-dependency security advisories (undici, tmp, @fastify/static, js-yaml, joi) and fixes several Flow/Action build bugs: snapshot churn on every rebuild, missing internal names, datapills inside Do-In-Parallel/Try-Catch, Choice input/output dropdown type, and post-install publish scope. Recommended for all SDK-enabled projects."
+      "releaseSummary": "Maintenance/bug-fix release over 4.8.1 — safe drop-in. Fixes the ScheduledScript run_time/run_period '[object Object]' serialisation bug (Time()/Duration() and plain-object forms now both produce correct output — the Nova Record() workaround is no longer needed), plus a large batch of Flow/ClientScript/ImportSet/SLA transform-and-build reliability fixes: Look Up Record parameter naming, flow snapshot churn (main_snapshot), internalName handling, Choice dropdown-with-None regression, inline scripts in TemplateValue, ClientScript order preservation, and ImportSet/SLA numeric+reference defaults. Adds multi-language choice labels, ATF TestingLibrary UI test step, Role federatedId, and Now Assist provider/model updates. Recommended for all SDK-enabled projects."
     }
   ],
   "servers": [
