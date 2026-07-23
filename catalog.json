@@ -56,7 +56,7 @@
         },
         "screenshotsDir": {
           "type": "path-relative-to-project",
-          "default": ".playwright/screenshots",
+          "default": "screenshots",
           "label": "Screenshots folder",
           "description": "Where Playwright saves screenshots. Path is relative to project root."
         },
