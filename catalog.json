@@ -1,163 +1,312 @@
 {
-  "$schemaVersion": 2,
-  "sdkBundles": [
-    {
-      "id": "servicenow-sdk",
-      "displayName": "ServiceNow SDK (Fluent)",
-      "shortLabel": "SDK",
-      "description": "Bundled @servicenow/sdk + @servicenow/glide for authoring Flow Designer flows, Playbooks, Script Includes, ACLs, REST Messages, Connection Aliases, and more declaratively in TypeScript.",
-      "version": "4.9.0",
-      "glideVersion": "27.0.5",
-      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.9.0/sdk-bundle-4.9.0.tgz",
-      "tarballSha256": "7df4a872c681008a418ad09f31fa8e69799c4bf4728c1dd6e0c3dc51335704aa",
-      "tarballs": {
-        "darwin-arm64": {
-          "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.9.0/sdk-bundle-4.9.0-darwin-arm64.tgz",
-          "tarballSha256": "9e0ea4f1cbe8f3dd5635ed920298ea4e6e5da5b387e040bb3f65869717ed834f"
-        }
-      },
-      "minimumGuiVersion": "3.1.0",
-      "targetReleaseFamily": "yokohama",
-      "releaseSummary": "Maintenance/bug-fix release over 4.8.1 \u2014 safe drop-in. Fixes the ScheduledScript run_time/run_period '[object Object]' serialisation bug (Time()/Duration() and plain-object forms now both produce correct output \u2014 the Nova Record() workaround is no longer needed), plus a large batch of Flow/ClientScript/ImportSet/SLA transform-and-build reliability fixes: Look Up Record parameter naming, flow snapshot churn (main_snapshot), internalName handling, Choice dropdown-with-None regression, inline scripts in TemplateValue, ClientScript order preservation, and ImportSet/SLA numeric+reference defaults. Adds multi-language choice labels, ATF TestingLibrary UI test step, Role federatedId, and Now Assist provider/model updates. Recommended for all SDK-enabled projects."
+ "$schemaVersion": 2,
+ "sdkBundles": [
+  {
+   "id": "servicenow-sdk",
+   "displayName": "ServiceNow SDK (Fluent)",
+   "shortLabel": "SDK",
+   "description": "Bundled @servicenow/sdk + @servicenow/glide for authoring Flow Designer flows, Playbooks, Script Includes, ACLs, REST Messages, Connection Aliases, and more declaratively in TypeScript.",
+   "version": "4.9.0",
+   "glideVersion": "27.0.5",
+   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.9.0/sdk-bundle-4.9.0.tgz",
+   "tarballSha256": "7df4a872c681008a418ad09f31fa8e69799c4bf4728c1dd6e0c3dc51335704aa",
+   "tarballs": {
+    "darwin-arm64": {
+     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.9.0/sdk-bundle-4.9.0-darwin-arm64.tgz",
+     "tarballSha256": "9e0ea4f1cbe8f3dd5635ed920298ea4e6e5da5b387e040bb3f65869717ed834f"
     }
-  ],
-  "servers": [
+   },
+   "minimumGuiVersion": "3.1.0",
+   "targetReleaseFamily": "yokohama",
+   "releaseSummary": "Maintenance/bug-fix release over 4.8.1 \u2014 safe drop-in. Fixes the ScheduledScript run_time/run_period '[object Object]' serialisation bug (Time()/Duration() and plain-object forms now both produce correct output \u2014 the Nova Record() workaround is no longer needed), plus a large batch of Flow/ClientScript/ImportSet/SLA transform-and-build reliability fixes: Look Up Record parameter naming, flow snapshot churn (main_snapshot), internalName handling, Choice dropdown-with-None regression, inline scripts in TemplateValue, ClientScript order preservation, and ImportSet/SLA numeric+reference defaults. Adds multi-language choice labels, ATF TestingLibrary UI test step, Role federatedId, and Now Assist provider/model updates. Recommended for all SDK-enabled projects."
+  }
+ ],
+ "servers": [
+  {
+   "id": "playwright",
+   "displayName": "Playwright",
+   "shortLabel": "PW",
+   "description": "Drive a real browser for ServiceNow UI work \u2014 flow validation, workspace probing, portal smoke, dashboard verification, playbook UI checks. Per-project Chromium profile preserves saved passwords, history, and any persistent cookies (incl. SN 'Remember me' sessions when ticked at login).",
+   "version": "0.0.73",
+   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.73/playwright-mcp-bundle-0.0.73.tgz",
+   "tarballSha256": "74a9fe455a600116f98e8c13d36e2ad77cd63f679948314b9fe44e55a68b8cf4",
+   "tarballs": {
+    "darwin-arm64": {
+     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.73/playwright-mcp-bundle-0.0.73-darwin-arm64.tgz",
+     "tarballSha256": "94def82e022452a26c08bdcb5bbf0f8a031ac7aac4106cf2199c1fc70c9a7c39"
+    }
+   },
+   "mcpToolPrefix": "Playwright",
+   "postInstallCommands": [
     {
-      "id": "playwright",
-      "displayName": "Playwright",
-      "shortLabel": "PW",
-      "description": "Drive a real browser for ServiceNow UI work \u2014 flow validation, workspace probing, portal smoke, dashboard verification, playbook UI checks. Per-project Chromium profile preserves saved passwords, history, and any persistent cookies (incl. SN 'Remember me' sessions when ticked at login).",
-      "version": "0.0.73",
-      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.73/playwright-mcp-bundle-0.0.73.tgz",
-      "tarballSha256": "74a9fe455a600116f98e8c13d36e2ad77cd63f679948314b9fe44e55a68b8cf4",
-      "tarballs": {
-        "darwin-arm64": {
-          "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.73/playwright-mcp-bundle-0.0.73-darwin-arm64.tgz",
-          "tarballSha256": "94def82e022452a26c08bdcb5bbf0f8a031ac7aac4106cf2199c1fc70c9a7c39"
-        }
-      },
-      "mcpToolPrefix": "Playwright",
-      "postInstallCommands": [
-        {
-          "cmd": "node",
-          "args": [
-            "./bin/install-browser.js",
-            "chromium"
-          ]
-        }
-      ],
-      "requiresConfig": true,
-      "configSchema": {
-        "browser": {
-          "type": "select",
-          "options": [
-            "chromium",
-            "firefox",
-            "webkit"
-          ],
-          "default": "chromium",
-          "label": "Browser engine"
-        },
-        "headed": {
-          "type": "boolean",
-          "default": true,
-          "label": "Show browser window (headed mode)",
-          "description": "Headed mode lets you watch the automation. Disable for headless / CI."
-        },
-        "screenshotsDir": {
-          "type": "path-relative-to-project",
-          "default": "screenshots",
-          "label": "Screenshots folder",
-          "description": "Where Playwright saves screenshots. Path is relative to project root."
-        },
-        "profileDir": {
-          "type": "path-relative-to-appdata",
-          "default": "playwright-profiles/{projectId}",
-          "label": "Browser profile folder",
-          "description": "Persistent Chromium profile per project. Preserves saved passwords, history, localStorage, and any cookies the server flags as persistent. SN's default session cookie is session-only \u2014 tick 'Remember me' at login if you want auth to survive browser close. Per-project keeps SN instance sessions isolated."
-        },
-        "actionTimeoutMs": {
-          "type": "select",
-          "options": [
-            "5000",
-            "10000",
-            "15000",
-            "30000",
-            "60000"
-          ],
-          "default": "15000",
-          "label": "Action timeout (ms)",
-          "description": "Client-side timeout for each Playwright action (click, screenshot, etc.). Playwright's own default of 5000ms is often too tight for ServiceNow UIs on corporate networks - screenshots wait on webfonts that can stall at a proxy."
-        }
-      },
-      "minimumGuiVersion": "2.7.0",
-      "useCases": [
-        "Building or validating Flow Designer flows",
-        "Workspace + UI Builder verification",
-        "Portal page + theme smoke",
-        "Dashboard / Performance Analytics visualisation review",
-        "Playbook UI validation"
-      ]
+     "cmd": "node",
+     "args": [
+      "./bin/install-browser.js",
+      "chromium"
+     ]
+    }
+   ],
+   "requiresConfig": true,
+   "configSchema": {
+    "browser": {
+     "type": "select",
+     "options": [
+      "chromium",
+      "firefox",
+      "webkit"
+     ],
+     "default": "chromium",
+     "label": "Browser engine"
     },
-    {
-      "id": "nova-galaxy",
-      "displayName": "Nova Galaxy",
-      "shortLabel": "GX",
-      "category": "tool",
-      "description": "Interactive 3D galaxy visualization for Sentinel discovery data. Renders tables, artifacts, and relationships as an explorable solar system \u2014 tables are suns, artifacts orbit as planets, edges are gravitational links. Requires Sentinel cache data (run discover_table_ecosystem first).",
-      "version": "0.5.0",
-      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-galaxy-v0.5.0/nova-galaxy-viz-0.5.0.tgz",
-      "tarballSha256": "72e8198ea5609c809a488ad1350b4f5047d8c6464430b6788419204df6a9d2c5",
-      "tarballs": {
-        "darwin-arm64": {
-          "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-galaxy-v0.5.0/nova-galaxy-viz-0.5.0.tgz",
-          "tarballSha256": "72e8198ea5609c809a488ad1350b4f5047d8c6464430b6788419204df6a9d2c5"
-        }
-      },
-      "mcpToolPrefix": "NovaGalaxy",
-      "requiresConfig": true,
-      "configSchema": {
-        "bloomIntensity": {
-          "type": "select",
-          "options": [
-            "off",
-            "subtle",
-            "medium",
-            "intense"
-          ],
-          "default": "medium",
-          "label": "Bloom / glow intensity",
-          "description": "Controls the glow effect on nodes and particles"
-        },
-        "particleDensity": {
-          "type": "select",
-          "options": [
-            "low",
-            "medium",
-            "high"
-          ],
-          "default": "medium",
-          "label": "Particle density",
-          "description": "Number of ambient particles. Lower for slower GPUs."
-        },
-        "cameraMode": {
-          "type": "select",
-          "options": [
-            "orbit",
-            "fly"
-          ],
-          "default": "orbit",
-          "label": "Default camera mode",
-          "description": "Orbit locks onto a focal point. Fly allows WASD free navigation."
-        }
-      },
-      "minimumGuiVersion": "3.44.0",
-      "useCases": [
-        "Exploring a ServiceNow instance's table ecosystem in 3D",
-        "Identifying configuration hotspots and sprawl visually",
-        "Presenting instance architecture to stakeholders",
-        "Comparing artifact density across tables"
-      ]
+    "headed": {
+     "type": "boolean",
+     "default": true,
+     "label": "Show browser window (headed mode)",
+     "description": "Headed mode lets you watch the automation. Disable for headless / CI."
+    },
+    "screenshotsDir": {
+     "type": "path-relative-to-project",
+     "default": "screenshots",
+     "label": "Screenshots folder",
+     "description": "Where Playwright saves screenshots. Path is relative to project root."
+    },
+    "profileDir": {
+     "type": "path-relative-to-appdata",
+     "default": "playwright-profiles/{projectId}",
+     "label": "Browser profile folder",
+     "description": "Persistent Chromium profile per project. Preserves saved passwords, history, localStorage, and any cookies the server flags as persistent. SN's default session cookie is session-only \u2014 tick 'Remember me' at login if you want auth to survive browser close. Per-project keeps SN instance sessions isolated."
+    },
+    "actionTimeoutMs": {
+     "type": "select",
+     "options": [
+      "5000",
+      "10000",
+      "15000",
+      "30000",
+      "60000"
+     ],
+     "default": "15000",
+     "label": "Action timeout (ms)",
+     "description": "Client-side timeout for each Playwright action (click, screenshot, etc.). Playwright's own default of 5000ms is often too tight for ServiceNow UIs on corporate networks - screenshots wait on webfonts that can stall at a proxy."
     }
-  ]
+   },
+   "minimumGuiVersion": "2.7.0",
+   "useCases": [
+    "Building or validating Flow Designer flows",
+    "Workspace + UI Builder verification",
+    "Portal page + theme smoke",
+    "Dashboard / Performance Analytics visualisation review",
+    "Playbook UI validation"
+   ]
+  },
+  {
+   "id": "nova-galaxy",
+   "displayName": "Nova Galaxy",
+   "shortLabel": "GX",
+   "category": "tool",
+   "description": "Interactive 3D galaxy visualization for Sentinel discovery data. Renders tables, artifacts, and relationships as an explorable solar system \u2014 tables are suns, artifacts orbit as planets, edges are gravitational links. Requires Sentinel cache data (run discover_table_ecosystem first).",
+   "version": "0.5.0",
+   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-galaxy-v0.5.0/nova-galaxy-viz-0.5.0.tgz",
+   "tarballSha256": "72e8198ea5609c809a488ad1350b4f5047d8c6464430b6788419204df6a9d2c5",
+   "tarballs": {
+    "darwin-arm64": {
+     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-galaxy-v0.5.0/nova-galaxy-viz-0.5.0.tgz",
+     "tarballSha256": "72e8198ea5609c809a488ad1350b4f5047d8c6464430b6788419204df6a9d2c5"
+    }
+   },
+   "mcpToolPrefix": "NovaGalaxy",
+   "requiresConfig": true,
+   "configSchema": {
+    "bloomIntensity": {
+     "type": "select",
+     "options": [
+      "off",
+      "subtle",
+      "medium",
+      "intense"
+     ],
+     "default": "medium",
+     "label": "Bloom / glow intensity",
+     "description": "Controls the glow effect on nodes and particles"
+    },
+    "particleDensity": {
+     "type": "select",
+     "options": [
+      "low",
+      "medium",
+      "high"
+     ],
+     "default": "medium",
+     "label": "Particle density",
+     "description": "Number of ambient particles. Lower for slower GPUs."
+    },
+    "cameraMode": {
+     "type": "select",
+     "options": [
+      "orbit",
+      "fly"
+     ],
+     "default": "orbit",
+     "label": "Default camera mode",
+     "description": "Orbit locks onto a focal point. Fly allows WASD free navigation."
+    }
+   },
+   "minimumGuiVersion": "3.44.0",
+   "useCases": [
+    "Exploring a ServiceNow instance's table ecosystem in 3D",
+    "Identifying configuration hotspots and sprawl visually",
+    "Presenting instance architecture to stakeholders",
+    "Comparing artifact density across tables"
+   ]
+  },
+  {
+   "id": "atlassian",
+   "displayName": "Atlassian (Jira + Confluence)",
+   "shortLabel": "JI",
+   "description": "Official Atlassian Rovo remote MCP server - live Jira issue + Confluence page read/write under your own Atlassian sign-in (OAuth in-session, permissions follow your Atlassian roles). No install, no credentials stored by Nova: enable per project, then sign in once via /mcp (Claude) or codex mcp login (Codex). Lets sn-story-manager round-trip a live Jira backlog instead of exporting CSV.",
+   "category": "mcp-server",
+   "kind": "remote-http",
+   "version": "1",
+   "mcpToolPrefix": "atlassian",
+   "remote": {
+    "urlTemplate": "https://mcp.atlassian.com/v1/mcp/authv2",
+    "oauth": {}
+   },
+   "requiresConfig": false,
+   "minimumGuiVersion": "3.74.0",
+   "useCases": [
+    "Round-trip the project backlog to live Jira from sn-story-manager (CSV fallback retained)",
+    "Read acceptance criteria / comments from Jira issues during builds",
+    "Publish build notes or release summaries to Confluence pages"
+   ]
+  },
+  {
+   "id": "workiq-sharepoint",
+   "displayName": "Work IQ SharePoint (preview)",
+   "shortLabel": "SP",
+   "description": "Microsoft's official remote MCP server for SharePoint (upload files, metadata, search, lists) via the Agent 365 tooling gateway. Actions run as the signed-in user (Entra). Requires: Microsoft 365 Copilot licence, and an Entra enterprise app registered with the matching WorkIQ-* API permission (admin consent). Get Tenant ID + App (client) ID from the Entra admin center. PREVIEW: Microsoft may rename server paths - if Test connection fails, verify the server path against learn.microsoft.com/microsoft-agent-365/tooling-servers-overview and correct it in Configure.",
+   "category": "mcp-server",
+   "kind": "remote-http",
+   "version": "1",
+   "mcpToolPrefix": "workiq_sharepoint",
+   "remote": {
+    "urlTemplate": "https://agent365.svc.cloud.microsoft/agents/tenants/{tenantId}/servers/{serverPath}",
+    "oauth": {
+     "clientIdFrom": "clientId",
+     "callbackPort": 8080
+    }
+   },
+   "requiresConfig": true,
+   "configSchema": {
+    "tenantId": {
+     "type": "string",
+     "default": "",
+     "label": "Entra tenant ID",
+     "description": "Directory (tenant) ID from the Microsoft Entra admin center"
+    },
+    "clientId": {
+     "type": "string",
+     "default": "",
+     "label": "Entra app client ID",
+     "description": "Application (client) ID of the registered enterprise app holding the WorkIQ-SharePointServer permission"
+    },
+    "serverPath": {
+     "type": "string",
+     "default": "mcp_SharePointTools",
+     "label": "Server path",
+     "description": "Work IQ server path segment (preview - confirm against the Microsoft Agent 365 docs if Test connection fails)"
+    }
+   },
+   "minimumGuiVersion": "3.74.0",
+   "useCases": [
+    "Pull requirement docs / workshop notes from customer SharePoint during discovery",
+    "Publish deliverables (UAT packs, release notes) to the engagement site"
+   ]
+  },
+  {
+   "id": "workiq-onedrive",
+   "displayName": "Work IQ OneDrive (preview)",
+   "shortLabel": "OD",
+   "description": "Microsoft's official remote MCP server for the signed-in user's OneDrive (files and folders) via the Agent 365 tooling gateway. Actions run as the signed-in user (Entra). Requires: Microsoft 365 Copilot licence, and an Entra enterprise app registered with the matching WorkIQ-* API permission (admin consent). Get Tenant ID + App (client) ID from the Entra admin center. PREVIEW: Microsoft may rename server paths - if Test connection fails, verify the server path against learn.microsoft.com/microsoft-agent-365/tooling-servers-overview and correct it in Configure.",
+   "category": "mcp-server",
+   "kind": "remote-http",
+   "version": "1",
+   "mcpToolPrefix": "workiq_onedrive",
+   "remote": {
+    "urlTemplate": "https://agent365.svc.cloud.microsoft/agents/tenants/{tenantId}/servers/{serverPath}",
+    "oauth": {
+     "clientIdFrom": "clientId",
+     "callbackPort": 8080
+    }
+   },
+   "requiresConfig": true,
+   "configSchema": {
+    "tenantId": {
+     "type": "string",
+     "default": "",
+     "label": "Entra tenant ID",
+     "description": "Directory (tenant) ID from the Microsoft Entra admin center"
+    },
+    "clientId": {
+     "type": "string",
+     "default": "",
+     "label": "Entra app client ID",
+     "description": "Application (client) ID of the registered enterprise app holding the WorkIQ-OneDriveServer permission"
+    },
+    "serverPath": {
+     "type": "string",
+     "default": "mcp_OneDriveTools",
+     "label": "Server path",
+     "description": "Work IQ server path segment (preview - confirm against the Microsoft Agent 365 docs if Test connection fails)"
+    }
+   },
+   "minimumGuiVersion": "3.74.0",
+   "useCases": [
+    "Read/write working documents in your own OneDrive from a build session"
+   ]
+  },
+  {
+   "id": "workiq-teams",
+   "displayName": "Work IQ Teams (preview)",
+   "shortLabel": "TM",
+   "description": "Microsoft's official remote MCP server for Microsoft Teams (chats, channels, messages, members) via the Agent 365 tooling gateway. Actions run as the signed-in user (Entra). Requires: Microsoft 365 Copilot licence, and an Entra enterprise app registered with the matching WorkIQ-* API permission (admin consent). Get Tenant ID + App (client) ID from the Entra admin center. PREVIEW: Microsoft may rename server paths - if Test connection fails, verify the server path against learn.microsoft.com/microsoft-agent-365/tooling-servers-overview and correct it in Configure.",
+   "category": "mcp-server",
+   "kind": "remote-http",
+   "version": "1",
+   "mcpToolPrefix": "workiq_teams",
+   "remote": {
+    "urlTemplate": "https://agent365.svc.cloud.microsoft/agents/tenants/{tenantId}/servers/{serverPath}",
+    "oauth": {
+     "clientIdFrom": "clientId",
+     "callbackPort": 8080
+    }
+   },
+   "requiresConfig": true,
+   "configSchema": {
+    "tenantId": {
+     "type": "string",
+     "default": "",
+     "label": "Entra tenant ID",
+     "description": "Directory (tenant) ID from the Microsoft Entra admin center"
+    },
+    "clientId": {
+     "type": "string",
+     "default": "",
+     "label": "Entra app client ID",
+     "description": "Application (client) ID of the registered enterprise app holding the WorkIQ-TeamsServer permission"
+    },
+    "serverPath": {
+     "type": "string",
+     "default": "mcp_TeamsTools",
+     "label": "Server path",
+     "description": "Work IQ server path segment (preview - confirm against the Microsoft Agent 365 docs if Test connection fails)"
+    }
+   },
+   "minimumGuiVersion": "3.74.0",
+   "useCases": [
+    "Post build/status updates to an engagement Teams channel",
+    "Read stand-up threads for context during story work"
+   ]
+  }
+ ]
 }
