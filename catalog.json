@@ -6,19 +6,13 @@
    "displayName": "ServiceNow SDK (Fluent)",
    "shortLabel": "SDK",
    "description": "Bundled @servicenow/sdk + @servicenow/glide for authoring Flow Designer flows, Playbooks, Script Includes, ACLs, REST Messages, Connection Aliases, and more declaratively in TypeScript.",
-   "version": "4.9.0",
+   "version": "4.10.0",
    "glideVersion": "27.0.5",
-   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.9.0/sdk-bundle-4.9.0.tgz",
-   "tarballSha256": "7df4a872c681008a418ad09f31fa8e69799c4bf4728c1dd6e0c3dc51335704aa",
-   "tarballs": {
-    "darwin-arm64": {
-     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.9.0/sdk-bundle-4.9.0-darwin-arm64.tgz",
-     "tarballSha256": "9e0ea4f1cbe8f3dd5635ed920298ea4e6e5da5b387e040bb3f65869717ed834f"
-    }
-   },
+   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.10.0/sdk-bundle-4.10.0.tgz",
+   "tarballSha256": "7f1278108d42d6ee192b6a58cfd80a10b8ea9fd2a517ce014c7020d6b25e9638",
    "minimumGuiVersion": "3.1.0",
    "targetReleaseFamily": "yokohama",
-   "releaseSummary": "Maintenance/bug-fix release over 4.8.1 \u2014 safe drop-in. Fixes the ScheduledScript run_time/run_period '[object Object]' serialisation bug (Time()/Duration() and plain-object forms now both produce correct output \u2014 the Nova Record() workaround is no longer needed), plus a large batch of Flow/ClientScript/ImportSet/SLA transform-and-build reliability fixes: Look Up Record parameter naming, flow snapshot churn (main_snapshot), internalName handling, Choice dropdown-with-None regression, inline scripts in TemplateValue, ClientScript order preservation, and ImportSet/SLA numeric+reference defaults. Adds multi-language choice labels, ATF TestingLibrary UI test step, Role federatedId, and Now Assist provider/model updates. Recommended for all SDK-enabled projects."
+   "releaseSummary": "Feature release over 4.9.0. NEW: StateModel API (declarative state machines on change_request/problem and other tables \u2014 produces the model plus its state, transition and condition records); `now-sdk cicd` wrapping sn_cicd (app-repo install/publish/rollback + ATF testsuite/test execution from the CLI); dependent questions for catalog variables (visibility/options driven by another variable); $override extended to sys_domain and other sys_* fields with non-default-domain round-tripping; ATF list steps + runServerSideScript in Script Include tests. FIXES: scheduled-script timezone mismatches and a midnight-conversion crash; many-to-many table relationships; max_length now defers to instance defaults; corrected policy-field and sys_documentation emission; corrected add_message inference and UiAction icon/boolean handling; better reference-column and view-field inference; Playbook startWithDelay can reference schedule records. VERIFIED on the bundled binary: install takes --source (NOT --directory), build takes a positional [source] \u2014 both default to CWD, so cd into the sub-project. install -r warns that on-instance metadata absent locally will be LOST. Rebuilding an app authored on <=4.9.0 shows an emission diff (max_length, add_message, sys_documentation) \u2014 review it before installing. NOTE: darwin-arm64 bundle not yet published for 4.10.0; existing macOS installs keep working on 4.9.0, but an update or fresh macOS install reports no bundle for the platform until the mac-catalog-bundles workflow packs it."
   }
  ],
  "servers": [
