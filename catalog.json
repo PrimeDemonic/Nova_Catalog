@@ -6,19 +6,19 @@
    "displayName": "ServiceNow SDK (Fluent)",
    "shortLabel": "SDK",
    "description": "Bundled @servicenow/sdk + @servicenow/glide for authoring Flow Designer flows, Playbooks, Script Includes, ACLs, REST Messages, Connection Aliases, and more declaratively in TypeScript.",
-   "version": "4.10.0",
+   "version": "4.11.0",
    "glideVersion": "27.0.5",
-   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.10.0/sdk-bundle-4.10.0.tgz",
-   "tarballSha256": "7f1278108d42d6ee192b6a58cfd80a10b8ea9fd2a517ce014c7020d6b25e9638",
+   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.11.0/sdk-bundle-4.11.0.tgz",
+   "tarballSha256": "3c60353d9af40633f5e779441c919e4e140e525f9e25decd01617fb98b256fa7",
    "tarballs": {
     "darwin-arm64": {
-     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.10.0/sdk-bundle-4.10.0-darwin-arm64.tgz",
-     "tarballSha256": "851f8756546b344fc97eb98d122b4c58ad39c9883841414c59c54a9aefd3a48a"
+     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.11.0/sdk-bundle-4.11.0-darwin-arm64.tgz",
+     "tarballSha256": "d1e87afe624232c3e8f0d8a3a34cbaac0127b440231bf7af56a5f88c34537133"
     }
    },
    "minimumGuiVersion": "3.1.0",
    "targetReleaseFamily": "yokohama",
-   "releaseSummary": "Feature release over 4.9.0. NEW: StateModel API (declarative state machines on change_request/problem and other tables \u2014 produces the model plus its state, transition and condition records); `now-sdk cicd` wrapping sn_cicd (app-repo install/publish/rollback + ATF testsuite/test execution from the CLI); dependent questions for catalog variables (visibility/options driven by another variable); $override extended to sys_domain and other sys_* fields with non-default-domain round-tripping; ATF list steps + runServerSideScript in Script Include tests. FIXES: scheduled-script timezone mismatches and a midnight-conversion crash; many-to-many table relationships; max_length now defers to instance defaults; corrected policy-field and sys_documentation emission; corrected add_message inference and UiAction icon/boolean handling; better reference-column and view-field inference; Playbook startWithDelay can reference schedule records. VERIFIED on the bundled binary: install takes --source (NOT --directory), build takes a positional [source] \u2014 both default to CWD, so cd into the sub-project. install -r warns that on-instance metadata absent locally will be LOST. Rebuilding an app authored on <=4.9.0 shows an emission diff (max_length, add_message, sys_documentation) \u2014 review it before installing."
+   "releaseSummary": "Feature release over 4.10.0. NEW: TestSuite() API (define ATF Test Suites + their member tests in Fluent); GraphQLApi() API (scripted GraphQL on sys_graphql_schema — resolvers, type resolvers, secure-by-default ACL fields, SDL/resolver scripts via Now.include); Record() support for sys_ui_style Field Styles and schedule entries; official vite support incl. dev-server HMR (react-ui-page-vite-sample in sdk-examples); Playbooks: Playbook + Stage Level Permissions, optional activities, Set Playbook Outputs activity, Agentic Activity config on hybrid activities, On-Demand launcher configurations, input-dependent resolution, single-XML build output. FIXES: sys_ui_list lost on install (missing root XML attributes) + domain-on-list support; form sections breaking on rebuild when referencing the built-in Default view; table-level documentation dropped/merged into column docs; sys_dictionary reference fields (dictionary overrides) mis-serialised on update; Data Policy Rule default-state round-trip; unsafe delete instructions for table/column/index; UI Page apps loading legacy platform scripts that clobbered native Array.from (broke Radix overlay dismissal/keyboard nav — the root cause behind the mandatory polyfill in sn-fluent-ui-pages); Flow: doTheFollowingUntil redesigned + until-outside-loop validation, assignActionOutputs complex outputs, setFlowVariables inline scripts, Decimal in FlowObject/FlowArray, rawInputs on Action; Playbook: orphaned lanes/activities now deleted, input reference qualifiers kept on transform, startWithDelay durations, TemplateValue pills; AI Agent version details for legacy/migrated agents; NowAssist skill input/output name fallback; CLI surfaces fetch-failure causes and OAuth login no longer requests an id_token. VERIFIED on the bundled binary: now-sdk --version reports 4.11.0; CLI flag shapes unchanged from 4.10.0 (install --source / positional build [source])."
   }
  ],
  "servers": [
@@ -26,7 +26,7 @@
    "id": "playwright",
    "displayName": "Playwright",
    "shortLabel": "PW",
-   "description": "Drive a real browser for ServiceNow UI work \u2014 flow validation, workspace probing, portal smoke, dashboard verification, playbook UI checks. Per-project Chromium profile preserves saved passwords, history, and any persistent cookies (incl. SN 'Remember me' sessions when ticked at login).",
+   "description": "Drive a real browser for ServiceNow UI work — flow validation, workspace probing, portal smoke, dashboard verification, playbook UI checks. Per-project Chromium profile preserves saved passwords, history, and any persistent cookies (incl. SN 'Remember me' sessions when ticked at login).",
    "version": "0.0.79",
    "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.79/playwright-mcp-bundle-0.0.79.tgz",
    "tarballSha256": "5bf384073e06637e53bdceca3cef8599b3062408518e1f575265375a0b7a6bf0",
@@ -74,7 +74,7 @@
      "type": "path-relative-to-appdata",
      "default": "playwright-profiles/{projectId}",
      "label": "Browser profile folder",
-     "description": "Persistent Chromium profile per project. Preserves saved passwords, history, localStorage, and any cookies the server flags as persistent. SN's default session cookie is session-only \u2014 tick 'Remember me' at login if you want auth to survive browser close. Per-project keeps SN instance sessions isolated."
+     "description": "Persistent Chromium profile per project. Preserves saved passwords, history, localStorage, and any cookies the server flags as persistent. SN's default session cookie is session-only — tick 'Remember me' at login if you want auth to survive browser close. Per-project keeps SN instance sessions isolated."
     },
     "actionTimeoutMs": {
      "type": "select",
@@ -104,7 +104,7 @@
    "displayName": "Nova Galaxy",
    "shortLabel": "GX",
    "category": "tool",
-   "description": "Interactive 3D galaxy visualization for Sentinel discovery data. Renders tables, artifacts, and relationships as an explorable solar system \u2014 tables are suns, artifacts orbit as planets, edges are gravitational links. Requires Sentinel cache data (run discover_table_ecosystem first).",
+   "description": "Interactive 3D galaxy visualization for Sentinel discovery data. Renders tables, artifacts, and relationships as an explorable solar system — tables are suns, artifacts orbit as planets, edges are gravitational links. Requires Sentinel cache data (run discover_table_ecosystem first).",
    "version": "0.5.0",
    "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-galaxy-v0.5.0/nova-galaxy-viz-0.5.0.tgz",
    "tarballSha256": "72e8198ea5609c809a488ad1350b4f5047d8c6464430b6788419204df6a9d2c5",
