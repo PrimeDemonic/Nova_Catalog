@@ -160,6 +160,25 @@
    ]
   },
   {
+   "id": "nova-recorder",
+   "displayName": "Nova Recorder",
+   "shortLabel": "REC",
+   "category": "tool",
+   "description": "Runtime bundle for Nova Recorder: narrated, annotated ServiceNow demo videos rendered from a project playbook (demos/<name>/demo.yaml) by the sn-demo-recorder skill. Ships ffmpeg 9.0.1 (gyan.dev release essentials build, GPL v3 - LICENSE and THIRD_PARTY.md included) plus the yaml parser the recorder tool needs. The browser comes from the Playwright catalog entry and narration from the platform's offline voice; no third-party service or key. This version is Windows-only (win32-x64) - the macOS bundle follows in a later catalog release.",
+   "version": "9.0.1",
+   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-recorder-v9.0.1/nova-recorder-bundle-9.0.1.tgz",
+   "tarballSha256": "afa6c9a63a718f9979c44bae65b0b26a87126aece743c89bb91ae65e0cee2445",
+   "mcpToolPrefix": "NovaRecorder",
+   "requiresConfig": false,
+   "minimumGuiVersion": "3.96.0",
+   "useCases": [
+    "Recording a narrated, annotated demo of a ServiceNow feature from a plain-English brief",
+    "Dry-running a demo playbook against the instance and fixing concerns before recording",
+    "Re-voicing one segment in the Demos panel and re-rendering only that segment",
+    "Producing a handover script (script.md) with review frames per segment"
+   ]
+  },
+  {
    "id": "atlassian",
    "displayName": "Atlassian (Jira + Confluence)",
    "shortLabel": "JI",
