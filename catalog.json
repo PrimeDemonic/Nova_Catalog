@@ -6,19 +6,19 @@
    "displayName": "ServiceNow SDK (Fluent)",
    "shortLabel": "SDK",
    "description": "Bundled @servicenow/sdk + @servicenow/glide for authoring Flow Designer flows, Playbooks, Script Includes, ACLs, REST Messages, Connection Aliases, and more declaratively in TypeScript.",
-   "version": "4.11.0",
+   "version": "4.12.0",
    "glideVersion": "27.0.5",
-   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.11.0/sdk-bundle-4.11.0.tgz",
-   "tarballSha256": "3c60353d9af40633f5e779441c919e4e140e525f9e25decd01617fb98b256fa7",
+   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.12.0/sdk-bundle-4.12.0.tgz",
+   "tarballSha256": "fc56e3cc3f4ebd65cc06b71394b1e9c739482f168eb4c3b2fb5d68dfb2b9df8c",
    "tarballs": {
     "darwin-arm64": {
-     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.11.0/sdk-bundle-4.11.0-darwin-arm64.tgz",
-     "tarballSha256": "d1e87afe624232c3e8f0d8a3a34cbaac0127b440231bf7af56a5f88c34537133"
+     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.12.0/sdk-bundle-4.12.0-darwin-arm64.tgz",
+     "tarballSha256": "0ba1ac14faf7a09c4b94382530fc0e7b7df750f178b7431cc188207433c3b04f"
     }
    },
    "minimumGuiVersion": "3.1.0",
    "targetReleaseFamily": "yokohama",
-   "releaseSummary": "Feature release over 4.10.0. NEW: TestSuite() API (define ATF Test Suites + their member tests in Fluent); GraphQLApi() API (scripted GraphQL on sys_graphql_schema — resolvers, type resolvers, secure-by-default ACL fields, SDL/resolver scripts via Now.include); Record() support for sys_ui_style Field Styles and schedule entries; official vite support incl. dev-server HMR (react-ui-page-vite-sample in sdk-examples); Playbooks: Playbook + Stage Level Permissions, optional activities, Set Playbook Outputs activity, Agentic Activity config on hybrid activities, On-Demand launcher configurations, input-dependent resolution, single-XML build output. FIXES: sys_ui_list lost on install (missing root XML attributes) + domain-on-list support; form sections breaking on rebuild when referencing the built-in Default view; table-level documentation dropped/merged into column docs; sys_dictionary reference fields (dictionary overrides) mis-serialised on update; Data Policy Rule default-state round-trip; unsafe delete instructions for table/column/index; UI Page apps loading legacy platform scripts that clobbered native Array.from (broke Radix overlay dismissal/keyboard nav — the root cause behind the mandatory polyfill in sn-fluent-ui-pages); Flow: doTheFollowingUntil redesigned + until-outside-loop validation, assignActionOutputs complex outputs, setFlowVariables inline scripts, Decimal in FlowObject/FlowArray, rawInputs on Action; Playbook: orphaned lanes/activities now deleted, input reference qualifiers kept on transform, startWithDelay durations, TemplateValue pills; AI Agent version details for legacy/migrated agents; NowAssist skill input/output name fallback; CLI surfaces fetch-failure causes and OAuth login no longer requests an id_token. VERIFIED on the bundled binary: now-sdk --version reports 4.11.0; CLI flag shapes unchanged from 4.10.0 (install --source / positional build [source])."
+   "releaseSummary": "Feature release over 4.11.0. NEW: Assessment + Risk Assessment APIs (define assessments in Fluent, with post-deployment steps and conditions); `now-sdk auth --print [alias] --format headers|bearer|env` prints a live, short-lived request-time credential for a stored alias (OAuth bearer, or basic-auth X-UserToken + session cookie) — the stored password/refresh token are never emitted; pre-authenticated sessions from the environment (SN_SDK_INSTANCE_URL + SN_SDK_SESSION_BEARER_TOKEN, or SN_SDK_SESSION_TOKEN + SN_SDK_SESSION_COOKIE) so any now-sdk command authenticates without a keychain lookup; `now-sdk cicd test logs` fetches ATF result logs with optional regex filtering; `now-sdk install` now defaults to ASYNC install with automatic synchronous fallback; attachment image_width/image_height preserved; `now-sdk dependencies` resolves ChoiceSet references; new ChoiceSet and GraphQLApi docs, ~40 Fluent API docs revised. AUTH: OAuth session reliability improved (intermittent CSRF/session failures); CSRF token handling restored for non-OAuth credentials; instance requests retry once on HTTP 401 to recover an expired session. FIXES: SPMenu widget parameter double-wrapping; bundled isomorphic-rollup updated (Vite fixes, sourcemaps). Keystore layout unchanged (service ServiceNow, alias/isDefault/creds blob) — Nova's SDK Keys writes remain compatible. VERIFIED on the bundled binary: now-sdk --version reports 4.12.0 (glide 27.0.5); auth --help lists --print with --format [headers|bearer|env]; install --help shows --async [default: true] — asynchronous install is the DEFAULT with synchronous fallback, so post-install steps must not assume the install has completed on the instance when the command returns; other flag shapes unchanged from 4.11.0 (install --source, -r reinstall, --demoData, --skip-flow-activation)."
   }
  ],
  "servers": [
