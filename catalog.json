@@ -100,66 +100,6 @@
    ]
   },
   {
-   "id": "nova-galaxy",
-   "displayName": "Nova Galaxy",
-   "shortLabel": "GX",
-   "category": "tool",
-   "description": "Interactive 3D galaxy visualization for Sentinel discovery data. Renders tables, artifacts, and relationships as an explorable solar system — tables are suns, artifacts orbit as planets, edges are gravitational links. Requires Sentinel cache data (run discover_table_ecosystem first).",
-   "version": "0.5.0",
-   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-galaxy-v0.5.0/nova-galaxy-viz-0.5.0.tgz",
-   "tarballSha256": "72e8198ea5609c809a488ad1350b4f5047d8c6464430b6788419204df6a9d2c5",
-   "tarballs": {
-    "darwin-arm64": {
-     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-galaxy-v0.5.0/nova-galaxy-viz-0.5.0.tgz",
-     "tarballSha256": "72e8198ea5609c809a488ad1350b4f5047d8c6464430b6788419204df6a9d2c5"
-    }
-   },
-   "mcpToolPrefix": "NovaGalaxy",
-   "requiresConfig": true,
-   "configSchema": {
-    "bloomIntensity": {
-     "type": "select",
-     "options": [
-      "off",
-      "subtle",
-      "medium",
-      "intense"
-     ],
-     "default": "medium",
-     "label": "Bloom / glow intensity",
-     "description": "Controls the glow effect on nodes and particles"
-    },
-    "particleDensity": {
-     "type": "select",
-     "options": [
-      "low",
-      "medium",
-      "high"
-     ],
-     "default": "medium",
-     "label": "Particle density",
-     "description": "Number of ambient particles. Lower for slower GPUs."
-    },
-    "cameraMode": {
-     "type": "select",
-     "options": [
-      "orbit",
-      "fly"
-     ],
-     "default": "orbit",
-     "label": "Default camera mode",
-     "description": "Orbit locks onto a focal point. Fly allows WASD free navigation."
-    }
-   },
-   "minimumGuiVersion": "3.44.0",
-   "useCases": [
-    "Exploring a ServiceNow instance's table ecosystem in 3D",
-    "Identifying configuration hotspots and sprawl visually",
-    "Presenting instance architecture to stakeholders",
-    "Comparing artifact density across tables"
-   ]
-  },
-  {
    "id": "nova-recorder",
    "displayName": "Nova Recorder",
    "shortLabel": "REC",
