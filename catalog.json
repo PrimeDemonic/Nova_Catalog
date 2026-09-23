@@ -74,7 +74,31 @@
      "type": "path-relative-to-appdata",
      "default": "playwright-profiles/{projectId}",
      "label": "Browser profile folder",
-     "description": "Persistent Chromium profile per project. Preserves saved passwords, history, localStorage, and any cookies the server flags as persistent. SN's default session cookie is session-only — tick 'Remember me' at login if you want auth to survive browser close. Per-project keeps SN instance sessions isolated."
+     "description": "Persistent Chromium profile per project. Preserves saved passwords, history, localStorage, and any cookies the server flags as persistent. SN's default session cookie is session-only — tick 'Remember me' at login if you want auth to survive browser close. Per-project keeps SN instance sessions isolated. With 'Browser profile per session' on slots, this folder is the first session's profile; a second session at the same time uses '<folder>~s2', a third '~s3', and so on, each keeping its own sign-in."
+    },
+    "profileMode": {
+     "type": "select",
+     "options": [
+      "slots",
+      "single",
+      "isolated"
+     ],
+     "default": "slots",
+     "label": "Browser profile per session",
+     "description": "slots: each session that runs at the same time gets its own browser profile, so two sessions in one project can both use the browser, and each profile keeps its own sign-in. When every slot is busy, a session gets a temporary browser (signed out, nothing saved). single: every session shares one profile, as before; a second session sees 'Browser is already in use'. isolated: every session starts signed out and nothing is saved to disk."
+    },
+    "maxSlots": {
+     "type": "select",
+     "options": [
+      "2",
+      "3",
+      "4",
+      "6",
+      "8"
+     ],
+     "default": "4",
+     "label": "Browser profiles per project (slots mode)",
+     "description": "How many sessions of one project can each have a saved browser profile at the same time. Each profile that has been used takes up to about 0.5 GB of disk. The Project Doctor lists them and can remove slots unused for 30 days."
     },
     "actionTimeoutMs": {
      "type": "select",
