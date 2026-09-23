@@ -6,19 +6,19 @@
    "displayName": "ServiceNow SDK (Fluent)",
    "shortLabel": "SDK",
    "description": "Bundled @servicenow/sdk + @servicenow/glide for authoring Flow Designer flows, Playbooks, Script Includes, ACLs, REST Messages, Connection Aliases, and more declaratively in TypeScript.",
-   "version": "4.12.0",
+   "version": "4.13.0",
    "glideVersion": "27.0.5",
-   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.12.0/sdk-bundle-4.12.0.tgz",
-   "tarballSha256": "fc56e3cc3f4ebd65cc06b71394b1e9c739482f168eb4c3b2fb5d68dfb2b9df8c",
+   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.13.0/sdk-bundle-4.13.0.tgz",
+   "tarballSha256": "7bab562a1084a4908926b2543bba2c7e9057704bd33a75c7c1b0b910cc3041b5",
    "tarballs": {
     "darwin-arm64": {
-     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.12.0/sdk-bundle-4.12.0-darwin-arm64.tgz",
-     "tarballSha256": "0ba1ac14faf7a09c4b94382530fc0e7b7df750f178b7431cc188207433c3b04f"
+     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.13.0/sdk-bundle-4.13.0-darwin-arm64.tgz",
+     "tarballSha256": "a6b9f6db28369acceaa37442a907c1907798edb84a85596ace671b9579eafd50"
     }
    },
    "minimumGuiVersion": "3.1.0",
    "targetReleaseFamily": "yokohama",
-   "releaseSummary": "Feature release over 4.11.0. NEW: Assessment + Risk Assessment APIs (define assessments in Fluent, with post-deployment steps and conditions); `now-sdk auth --print [alias] --format headers|bearer|env` prints a live, short-lived request-time credential for a stored alias (OAuth bearer, or basic-auth X-UserToken + session cookie) — the stored password/refresh token are never emitted; pre-authenticated sessions from the environment (SN_SDK_INSTANCE_URL + SN_SDK_SESSION_BEARER_TOKEN, or SN_SDK_SESSION_TOKEN + SN_SDK_SESSION_COOKIE) so any now-sdk command authenticates without a keychain lookup; `now-sdk cicd test logs` fetches ATF result logs with optional regex filtering; `now-sdk install` now defaults to ASYNC install with automatic synchronous fallback; attachment image_width/image_height preserved; `now-sdk dependencies` resolves ChoiceSet references; new ChoiceSet and GraphQLApi docs, ~40 Fluent API docs revised. AUTH: OAuth session reliability improved (intermittent CSRF/session failures); CSRF token handling restored for non-OAuth credentials; instance requests retry once on HTTP 401 to recover an expired session. FIXES: SPMenu widget parameter double-wrapping; bundled isomorphic-rollup updated (Vite fixes, sourcemaps). Keystore layout unchanged (service ServiceNow, alias/isDefault/creds blob) — Nova's SDK Keys writes remain compatible. VERIFIED on the bundled binary: now-sdk --version reports 4.12.0 (glide 27.0.5); auth --help lists --print with --format [headers|bearer|env]; install --help shows --async [default: true] — asynchronous install is the DEFAULT with synchronous fallback, so post-install steps must not assume the install has completed on the instance when the command returns; other flag shapes unchanged from 4.11.0 (install --source, -r reinstall, --demoData, --skip-flow-activation)."
+   "releaseSummary": "Feature release over 4.12.0, including the unannounced 4.12.1/4.12.2 patches (telemetry only). Glide stays 27.0.5, Node stays >=20.18.0, and none of the command flags or output lines Nova reads changed. NEW: a DatabaseView API (sys_db_view; author from the type file, because the release-note example does not compile); playbook variants, a Go Back activity, isIdealPath branches, action overrides, image attachments and public playbooks; indexes on augmented tables; Flow endFlow inside Catch; `--timeout` (default 3600 s) on `download` and `transform`; a new `now-sdk query <table>` command; `auth --add --password-stdin` for non-interactive adds; and MFA code prompts for basic-auth logins in an interactive terminal only (agent sessions and Nova's checks have no terminal, so keep using OAuth on MFA instances). FIXED: OAuth installs no longer replay session cookies, and an upload the instance redirects now fails with 'The install request was redirected away from the upload endpoint\u2026 The app was not installed' instead of reporting success; generated email notifications accept $meta, so Nova's strip-notification-meta step retires itself; augmenting a table no longer resets its access flags; column hint/help/plural serialise correctly. Expect emission diffs on the first 4.13.0 rebuild (sys_db_object access flags, sys_documentation). VERIFIED on the bundled binary: `now-sdk --version` reports 4.13.0 (glide 27.0.5); `install --help` is unchanged from 4.12.0 (`--source`, `-r`, `-a/--auth`, `--async` default true, `--demoData`, `--skip-flow-activation`); `download --help` and `transform --help` list `--timeout`; `auth --help` lists `--print`/`--format` and `--password-stdin`. npm still tags 4.12.2 as `latest` and 4.13.0 as `next`; the bundle pins 4.13.0 exactly."
   }
  ],
  "servers": [
