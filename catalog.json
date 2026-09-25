@@ -18,7 +18,7 @@
    },
    "minimumGuiVersion": "3.1.0",
    "targetReleaseFamily": "yokohama",
-   "releaseSummary": "Feature release over 4.12.0, including the unannounced 4.12.1/4.12.2 patches (telemetry only). Glide stays 27.0.5, Node stays >=20.18.0, and none of the command flags or output lines Nova reads changed. NEW: a DatabaseView API (sys_db_view; author from the type file, because the release-note example does not compile); playbook variants, a Go Back activity, isIdealPath branches, action overrides, image attachments and public playbooks; indexes on augmented tables; Flow endFlow inside Catch; `--timeout` (default 3600 s) on `download` and `transform`; a new `now-sdk query <table>` command; `auth --add --password-stdin` for non-interactive adds; and MFA code prompts for basic-auth logins in an interactive terminal only (agent sessions and Nova's checks have no terminal, so keep using OAuth on MFA instances). FIXED: OAuth installs no longer replay session cookies, and an upload the instance redirects now fails with 'The install request was redirected away from the upload endpoint\u2026 The app was not installed' instead of reporting success; generated email notifications accept $meta, so Nova's strip-notification-meta step retires itself; augmenting a table no longer resets its access flags; column hint/help/plural serialise correctly. Expect emission diffs on the first 4.13.0 rebuild (sys_db_object access flags, sys_documentation). VERIFIED on the bundled binary: `now-sdk --version` reports 4.13.0 (glide 27.0.5); `install --help` is unchanged from 4.12.0 (`--source`, `-r`, `-a/--auth`, `--async` default true, `--demoData`, `--skip-flow-activation`); `download --help` and `transform --help` list `--timeout`; `auth --help` lists `--print`/`--format` and `--password-stdin`. npm still tags 4.12.2 as `latest` and 4.13.0 as `next`; the bundle pins 4.13.0 exactly."
+   "releaseSummary": "Feature release over 4.12.0, including the unannounced 4.12.1/4.12.2 patches (telemetry only). Glide stays 27.0.5, Node stays >=20.18.0, and none of the command flags or output lines Nova reads changed. NEW: a DatabaseView API (sys_db_view; author from the type file, because the release-note example does not compile); playbook variants, a Go Back activity, isIdealPath branches, action overrides, image attachments and public playbooks; indexes on augmented tables; Flow endFlow inside Catch; `--timeout` (default 3600 s) on `download` and `transform`; a new `now-sdk query <table>` command; `auth --add --password-stdin` for non-interactive adds; and MFA code prompts for basic-auth logins in an interactive terminal only (agent sessions and Nova's checks have no terminal, so keep using OAuth on MFA instances). FIXED: OAuth installs no longer replay session cookies, and an upload the instance redirects now fails with 'The install request was redirected away from the upload endpoint… The app was not installed' instead of reporting success; generated email notifications accept $meta, so Nova's strip-notification-meta step retires itself; augmenting a table no longer resets its access flags; column hint/help/plural serialise correctly. Expect emission diffs on the first 4.13.0 rebuild (sys_db_object access flags, sys_documentation). VERIFIED on the bundled binary: `now-sdk --version` reports 4.13.0 (glide 27.0.5); `install --help` is unchanged from 4.12.0 (`--source`, `-r`, `-a/--auth`, `--async` default true, `--demoData`, `--skip-flow-activation`); `download --help` and `transform --help` list `--timeout`; `auth --help` lists `--print`/`--format` and `--password-stdin`. npm still tags 4.12.2 as `latest` and 4.13.0 as `next`; the bundle pins 4.13.0 exactly."
   }
  ],
  "servers": [
@@ -146,6 +146,64 @@
     "Dry-running a demo playbook against the instance and fixing concerns before recording",
     "Re-voicing one segment in the Demos panel and re-rendering only that segment",
     "Producing a handover script (script.md) with review frames per segment"
+   ]
+  },
+  {
+   "id": "android-runtime",
+   "displayName": "Mobile (Android)",
+   "shortLabel": "MOB",
+   "category": "tool",
+   "kind": "provisioned",
+   "description": "Lets Claude load, sign in to, navigate, screenshot and record the ServiceNow mobile apps (above all ServiceNow Agent) on an Android emulator. Nova downloads Google's Android SDK tools, emulator and a Google Play system image onto this machine (nothing from Google is bundled; you accept Google's SDK licence in Nova first), builds one base device that you sign in to Google on and install Agent into from the Play Store, then gives each project that enables Mobile its own copy of that device, signed in to the project's instance. Claude drives it through the Mobile MCP (nova-mobile over mobile-mcp). Needs Windows Hypervisor Platform on Windows; about 20 GB free disk.",
+   "version": "1.0.0",
+   "provision": {
+    "platforms": [
+     "win32-x64"
+    ],
+    "repositoryUrl": "https://dl.google.com/android/repository/repository2-3.xml",
+    "cmdlineToolsMinRevision": "22.0",
+    "apiLevel": 34,
+    "imageTag": "google_apis_playstore",
+    "abis": {
+     "win32-x64": "x86_64",
+     "darwin-arm64": "arm64-v8a"
+    },
+    "packages": [
+     "platform-tools",
+     "emulator"
+    ],
+    "guestRamMb": 6144,
+    "lowRamGuestMb": 3072,
+    "minFreeDiskGb": 20,
+    "agentPackage": "com.servicenow.fulfiller",
+    "licenceUrl": "https://developer.android.com/studio/terms"
+   },
+   "mcpToolPrefix": "AndroidRuntime",
+   "requiresConfig": false,
+   "minimumGuiVersion": "4.8.0",
+   "useCases": [
+    "Verifying a mobile applet, card, list or action in ServiceNow Agent after building it (sn-mobile-verify)",
+    "Screenshots and recordings of the Agent app for a demo or handover",
+    "Checking what a fulfiller sees on mobile for a record, without a physical phone"
+   ]
+  },
+  {
+   "id": "mobile",
+   "displayName": "Mobile MCP",
+   "shortLabel": "MM",
+   "category": "mcp-server",
+   "bundledWith": "android-runtime",
+   "description": "Nova's Mobile MCP (nova-mobile): Claude's hands on the project's own Android device. Starts and stops the emulator (headless by default), lists what is on screen as a short filtered list (about 90% fewer tokens than the raw accessibility tree, refs kept), taps by ref only on the element Claude was shown, screenshots, and records MP4s to the project's screenshots/ folder. Pinned to the project's device: another project's device, and every call in a project without Mobile, is refused. One Claude session holds a device at a time. It stops the device automation it starts (mobilecli daemon, app_process, adb forwards) when the session ends. Installed and enabled by the Mobile (Android) runtime, not on its own. Bundles mobile-mcp 1.0.5 (Apache-2.0), mobilecli 1.0.13 (FSL-1.1-ALv2, terms included) and scrcpy 4.1 (Apache-2.0); nothing from Google or ServiceNow. Windows x64 now; the macOS Apple Silicon bundle follows the consultant Mac check.",
+   "version": "1.0.0",
+   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/mobile-v1.0.0/mobile-mcp-bundle-1.0.0.tgz",
+   "tarballSha256": "bbcb19c632cf729c105da45c4b03434cc9186ba54adb1a7dcd61c25df49fd0d5",
+   "mcpToolPrefix": "Mobile",
+   "requiresConfig": false,
+   "minimumGuiVersion": "4.8.0",
+   "useCases": [
+    "Verifying a mobile applet, card, list or action in ServiceNow Agent after a build (sn-mobile-verify)",
+    "Reading list counts, tiles and empty states on Agent screens through the filtered element list",
+    "Screenshots and MP4 recordings of the Agent app for evidence, demos and handovers"
    ]
   },
   {
