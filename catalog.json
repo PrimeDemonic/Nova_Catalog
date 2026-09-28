@@ -158,7 +158,8 @@
    "version": "1.0.0",
    "provision": {
     "platforms": [
-     "win32-x64"
+     "win32-x64",
+     "darwin-arm64"
     ],
     "repositoryUrl": "https://dl.google.com/android/repository/repository2-3.xml",
     "cmdlineToolsMinRevision": "22.0",
@@ -193,10 +194,16 @@
    "shortLabel": "MM",
    "category": "mcp-server",
    "bundledWith": "android-runtime",
-   "description": "Nova's Mobile MCP (nova-mobile): Claude's hands on the project's own Android device. Starts and stops the emulator (headless by default), lists what is on screen as a short filtered list (about 90% fewer tokens than the raw accessibility tree, refs kept), taps by ref only on the element Claude was shown, screenshots, and records MP4s to the project's screenshots/ folder. Pinned to the project's device: another project's device, and every call in a project without Mobile, is refused. One Claude session holds a device at a time. It stops the device automation it starts (mobilecli daemon, app_process, adb forwards) when the session ends. Installed and enabled by the Mobile (Android) runtime, not on its own. Bundles mobile-mcp 1.0.5 (Apache-2.0), mobilecli 1.0.13 (FSL-1.1-ALv2, terms included) and scrcpy 4.1 (Apache-2.0); nothing from Google or ServiceNow. Windows x64 now; the macOS Apple Silicon bundle follows the consultant Mac check.",
+   "description": "Nova's Mobile MCP (nova-mobile): Claude's hands on the project's own Android device. Starts and stops the emulator (headless by default), lists what is on screen as a short filtered list (about 90% fewer tokens than the raw accessibility tree, refs kept), taps by ref only on the element Claude was shown, screenshots, and records MP4s to the project's screenshots/ folder. Pinned to the project's device: another project's device, and every call in a project without Mobile, is refused. One Claude session holds a device at a time. It stops the device automation it starts (mobilecli daemon, app_process, adb forwards) when the session ends. Installed and enabled by the Mobile (Android) runtime, not on its own. Bundles mobile-mcp 1.0.5 (Apache-2.0), mobilecli 1.0.13 (FSL-1.1-ALv2, terms included) and scrcpy 4.1 (Apache-2.0); nothing from Google or ServiceNow. Windows x64 and Apple Silicon Macs.",
    "version": "1.0.1",
    "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/mobile-v1.0.1/mobile-mcp-bundle-1.0.1.tgz",
    "tarballSha256": "a544838d9e6cac450c7e3e797511868af9ab1a305f44db6470125c9a342f14f5",
+   "tarballs": {
+    "darwin-arm64": {
+     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/mobile-v1.0.1/mobile-mcp-bundle-1.0.1-darwin-arm64.tgz",
+     "tarballSha256": "1d880a0df19c4655b2d2652e2f9f5d68932954804884c318ef47b6c304c64459"
+    }
+   },
    "mcpToolPrefix": "Mobile",
    "requiresConfig": false,
    "minimumGuiVersion": "4.8.0",
