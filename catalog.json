@@ -1,5 +1,23 @@
 {
  "$schemaVersion": 2,
+ "models": {
+  "default": "opus",
+  "latest": [
+   { "id": "opus", "label": "Opus (latest)", "family": "opus" },
+   { "id": "sonnet", "label": "Sonnet (latest)", "family": "sonnet" },
+   { "id": "fable", "label": "Fable (latest)", "family": "fable" },
+   { "id": "haiku", "label": "Haiku (latest)", "family": "haiku" }
+  ],
+  "pinned": [
+   { "id": "claude-opus-5-5", "label": "Opus 5.5", "family": "opus" },
+   { "id": "claude-opus-5", "label": "Opus 5", "family": "opus" },
+   { "id": "claude-sonnet-5-5", "label": "Sonnet 5.5", "family": "sonnet" },
+   { "id": "claude-sonnet-5", "label": "Sonnet 5", "family": "sonnet" },
+   { "id": "claude-fable-5-1", "label": "Fable 5.1", "family": "fable" },
+   { "id": "claude-fable-5", "label": "Fable 5", "family": "fable" },
+   { "id": "claude-haiku-4-5", "label": "Haiku 4.5", "family": "haiku" }
+  ]
+ },
  "sdkBundles": [
   {
    "id": "servicenow-sdk",
