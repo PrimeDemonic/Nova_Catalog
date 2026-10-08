@@ -1,5 +1,6 @@
 {
  "$schemaVersion": 2,
+ "contacts": { "apiKeys": "Mike" },
  "models": {
   "default": "opus",
   "latest": [
@@ -42,6 +43,7 @@
  "servers": [
   {
    "id": "playwright",
+   "recommended": true,
    "displayName": "Playwright",
    "shortLabel": "PW",
    "description": "Drive a real browser for ServiceNow UI work — flow validation, workspace probing, portal smoke, dashboard verification, playbook UI checks. Per-project Chromium profile preserves saved passwords, history, and any persistent cookies (incl. SN 'Remember me' sessions when ticked at login).",
@@ -143,6 +145,7 @@
   },
   {
    "id": "nova-recorder",
+   "recommended": true,
    "displayName": "Nova Recorder",
    "shortLabel": "REC",
    "category": "tool",
