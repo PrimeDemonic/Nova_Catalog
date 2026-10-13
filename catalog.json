@@ -240,13 +240,13 @@
    "shortLabel": "NP",
    "category": "mcp-server",
    "description": "Nova Ping: Claude sends Adaptive Cards and files to a colleague's Teams chat or a Teams channel through the Workflows link that person shared. Two tools: list_addresses (read only, never a link) and send_message (the permission prompt is the approval; Ask or Allow is set on Nova's Nova Ping page). The address book and the links stay on this machine (links in the OS keychain). Unattended runs never send. A Node server with no dependencies; no third-party service beyond Microsoft Power Automate.",
-   "version": "1.0.0",
-   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-ping-v1.0.0/nova-ping-bundle-1.0.0.tgz",
-   "tarballSha256": "c9988159c50b859f8b316aeb327892f5bffec93a75aacb08678d4b5b6708995e",
+   "version": "1.1.0",
+   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-ping-v1.1.0/nova-ping-bundle-1.1.0.tgz",
+   "tarballSha256": "fdc3cd60a7a337ac5a00a0ae157b917447d35e6defc85545d76d27f053af30d1",
    "tarballs": {
     "darwin-arm64": {
-     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-ping-v1.0.0/nova-ping-bundle-1.0.0.tgz",
-     "tarballSha256": "c9988159c50b859f8b316aeb327892f5bffec93a75aacb08678d4b5b6708995e"
+     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-ping-v1.1.0/nova-ping-bundle-1.1.0.tgz",
+     "tarballSha256": "fdc3cd60a7a337ac5a00a0ae157b917447d35e6defc85545d76d27f053af30d1"
     }
    },
    "mcpToolPrefix": "NovaPing",
