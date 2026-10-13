@@ -235,6 +235,29 @@
    ]
   },
   {
+   "id": "nova-ping",
+   "displayName": "Nova Ping",
+   "shortLabel": "NP",
+   "category": "mcp-server",
+   "description": "Nova Ping: Claude sends Adaptive Cards and files to a colleague's Teams chat or a Teams channel through the Workflows link that person shared. Two tools: list_addresses (read only, never a link) and send_message (the permission prompt is the approval; Ask or Allow is set on Nova's Nova Ping page). The address book and the links stay on this machine (links in the OS keychain). Unattended runs never send. A Node server with no dependencies; no third-party service beyond Microsoft Power Automate.",
+   "version": "1.0.0",
+   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-ping-v1.0.0/nova-ping-bundle-1.0.0.tgz",
+   "tarballSha256": "c9988159c50b859f8b316aeb327892f5bffec93a75aacb08678d4b5b6708995e",
+   "tarballs": {
+    "darwin-arm64": {
+     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-ping-v1.0.0/nova-ping-bundle-1.0.0.tgz",
+     "tarballSha256": "c9988159c50b859f8b316aeb327892f5bffec93a75aacb08678d4b5b6708995e"
+    }
+   },
+   "mcpToolPrefix": "NovaPing",
+   "requiresConfig": false,
+   "minimumGuiVersion": "4.20.0",
+   "useCases": [
+    "Send a colleague a file or a handover in Teams",
+    "Tell a project channel a story is ready to test, @mentioning the tester"
+   ]
+  },
+  {
    "id": "atlassian",
    "displayName": "Atlassian (Jira + Confluence)",
    "shortLabel": "JI",
