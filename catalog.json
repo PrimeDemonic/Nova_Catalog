@@ -47,13 +47,13 @@
    "displayName": "Playwright",
    "shortLabel": "PW",
    "description": "Drive a real browser for ServiceNow UI work — flow validation, workspace probing, portal smoke, dashboard verification, playbook UI checks. Per-project Chromium profile preserves saved passwords, history, and any persistent cookies (incl. SN 'Remember me' sessions when ticked at login).",
-   "version": "0.0.79",
-   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.79/playwright-mcp-bundle-0.0.79.tgz",
-   "tarballSha256": "5bf384073e06637e53bdceca3cef8599b3062408518e1f575265375a0b7a6bf0",
+   "version": "0.0.83",
+   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.83/playwright-mcp-bundle-0.0.83.tgz",
+   "tarballSha256": "c68541164f83d4d959acdaf3559536533b2b067e62eec332e5b3e99210f3ef6a",
    "tarballs": {
     "darwin-arm64": {
-     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.79/playwright-mcp-bundle-0.0.79-darwin-arm64.tgz",
-     "tarballSha256": "70a966ee95def228dcc3aefb4283b7a3b1e7af02dd6961b2d63b1f5fa1f72441"
+     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.83/playwright-mcp-bundle-0.0.83-darwin-arm64.tgz",
+     "tarballSha256": "88d822d4150b017be475cc824032e49a827559ecd02a8664cf4ec056537b5567"
     }
    },
    "mcpToolPrefix": "Playwright",
