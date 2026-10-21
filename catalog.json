@@ -405,6 +405,26 @@
     "Post build/status updates to an engagement Teams channel",
     "Read stand-up threads for context during story work"
    ]
+  },
+  {
+   "id": "moveworks-docs",
+   "displayName": "Moveworks docs",
+   "shortLabel": "MW",
+   "description": "Moveworks' public documentation search (docs.moveworks.com), as an MCP server. No sign-in, no credentials, read only: one tool, searchDocs, returns doc passages with their source URLs. Enable it in projects that set up Moveworks (the sn-module-moveworks and moveworks-tenant-setup skills).",
+   "category": "mcp-server",
+   "kind": "remote-http",
+   "version": "1",
+   "mcpToolPrefix": "moveworks_docs",
+   "remote": {
+    "urlTemplate": "https://docs.moveworks.com/_mcp/server",
+    "auth": "none"
+   },
+   "requiresConfig": false,
+   "minimumGuiVersion": "4.30.0",
+   "useCases": [
+    "Look up Moveworks Setup screens, connector options and limits while configuring a tenant",
+    "Check a Moveworks claim against the vendor's docs before it goes into a skill or a design"
+   ]
   }
  ]
 }
