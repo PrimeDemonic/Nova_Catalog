@@ -261,7 +261,7 @@
    "id": "atlassian",
    "displayName": "Atlassian (Jira + Confluence)",
    "shortLabel": "JI",
-   "description": "Official Atlassian Rovo remote MCP server - live Jira issue + Confluence page read/write under your own Atlassian sign-in (OAuth in-session, permissions follow your Atlassian roles). No install, no credentials stored by Nova: enable per project, then sign in once via /mcp (Claude) or codex mcp login (Codex). Lets sn-story-manager round-trip a live Jira backlog instead of exporting CSV.",
+   "description": "Official Atlassian Rovo remote MCP server - live Jira issue + Confluence page read/write under your own Atlassian sign-in (OAuth in-session, permissions follow your Atlassian roles). No install: enable per project, then press Connect for a browser sign-in. The refresh token is kept in the OS keychain for that project, and Nova's local bridge passes it to the session. Lets sn-story-manager round-trip a live Jira backlog instead of exporting CSV.",
    "category": "mcp-server",
    "kind": "remote-http",
    "version": "1",
