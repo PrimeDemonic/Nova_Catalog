@@ -40,6 +40,27 @@
    "releaseSummary": "Feature release over 4.12.0, including the unannounced 4.12.1/4.12.2 patches (telemetry only). Glide stays 27.0.5, Node stays >=20.18.0, and none of the command flags or output lines Nova reads changed. NEW: a DatabaseView API (sys_db_view; author from the type file, because the release-note example does not compile); playbook variants, a Go Back activity, isIdealPath branches, action overrides, image attachments and public playbooks; indexes on augmented tables; Flow endFlow inside Catch; `--timeout` (default 3600 s) on `download` and `transform`; a new `now-sdk query <table>` command; `auth --add --password-stdin` for non-interactive adds; and MFA code prompts for basic-auth logins in an interactive terminal only (agent sessions and Nova's checks have no terminal, so keep using OAuth on MFA instances). FIXED: OAuth installs no longer replay session cookies, and an upload the instance redirects now fails with 'The install request was redirected away from the upload endpoint… The app was not installed' instead of reporting success; generated email notifications accept $meta, so Nova's strip-notification-meta step retires itself; augmenting a table no longer resets its access flags; column hint/help/plural serialise correctly. Expect emission diffs on the first 4.13.0 rebuild (sys_db_object access flags, sys_documentation). VERIFIED on the bundled binary: `now-sdk --version` reports 4.13.0 (glide 27.0.5); `install --help` is unchanged from 4.12.0 (`--source`, `-r`, `-a/--auth`, `--async` default true, `--demoData`, `--skip-flow-activation`); `download --help` and `transform --help` list `--timeout`; `auth --help` lists `--print`/`--format` and `--password-stdin`. npm still tags 4.12.2 as `latest` and 4.13.0 as `next`; the bundle pins 4.13.0 exactly."
   }
  ],
+ "sdkBundlesV2": [
+   {
+     "id": "servicenow-sdk",
+     "displayName": "ServiceNow SDK (Fluent)",
+     "shortLabel": "SDK",
+     "description": "Bundled @servicenow/sdk + @servicenow/glide for authoring Flow Designer flows, Playbooks, Script Includes, ACLs, REST Messages, Connection Aliases, and more declaratively in TypeScript.",
+     "version": "4.14.0",
+     "glideVersion": "27.0.5",
+     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.14.0/sdk-bundle-4.14.0.tgz",
+     "tarballSha256": "c500b6956f46442756beecaec9dca77d51bb7e7f81a85a0b32ef7e503e939698",
+     "tarballs": {
+       "darwin-arm64": {
+         "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.14.0/sdk-bundle-4.14.0-darwin-arm64.tgz",
+         "tarballSha256": "0499527d3c2787f92e5868dfbc461c6366b7112e795f96261d08f10457025e0c"
+       }
+     },
+     "minimumGuiVersion": "4.33.0",
+     "targetReleaseFamily": "yokohama",
+     "releaseSummary": "Feature release over 4.13.x. Glide stays 27.0.5. Logins move to an encrypted store (~/.now-sdk/credentials.enc with a 32-byte keychain key), which Nova writes from 4.33.0, so this bundle is offered only to Nova 4.33.0 and later. NEW: a UiMacro API (sys_ui_macro), reusable ATF tests (isReusable, inputs/outputs), arrayDenormalized and referenceQualCondition columns, Table.basePolicy and per-role protectionPolicy on Acl, domain on Assessment/RiskAssessment, and `now-sdk exec` (Nova refuses it: use execute_background_script, where the guards apply). Fixes include the AIUX ACL path on Windows, sys_ui_message records, sys_app vendor, transform escaping, related lists, sys_dictionary roles and the RestApi default URI. Upstream notes: https://github.com/ServiceNow/sdk/releases/tag/v4.14.0"
+   }
+ ],
  "servers": [
   {
    "id": "playwright",
