@@ -30,10 +30,12 @@
    "glideVersion": "27.0.5",
    "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.13.0/sdk-bundle-4.13.0.tgz",
    "tarballSha256": "7bab562a1084a4908926b2543bba2c7e9057704bd33a75c7c1b0b910cc3041b5",
+   "downloadBytes": 75857999,
    "tarballs": {
     "darwin-arm64": {
      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.13.0/sdk-bundle-4.13.0-darwin-arm64.tgz",
-     "tarballSha256": "a6b9f6db28369acceaa37442a907c1907798edb84a85596ace671b9579eafd50"
+     "tarballSha256": "a6b9f6db28369acceaa37442a907c1907798edb84a85596ace671b9579eafd50",
+     "downloadBytes": 70618549
     }
    },
    "minimumGuiVersion": "3.1.0",
@@ -52,10 +54,12 @@
    "version": "0.0.83",
    "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.83/playwright-mcp-bundle-0.0.83.tgz",
    "tarballSha256": "c68541164f83d4d959acdaf3559536533b2b067e62eec332e5b3e99210f3ef6a",
+   "downloadBytes": 4154634,
    "tarballs": {
     "darwin-arm64": {
      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/playwright-v0.0.83/playwright-mcp-bundle-0.0.83-darwin-arm64.tgz",
-     "tarballSha256": "88d822d4150b017be475cc824032e49a827559ecd02a8664cf4ec056537b5567"
+     "tarballSha256": "88d822d4150b017be475cc824032e49a827559ecd02a8664cf4ec056537b5567",
+     "downloadBytes": 4140376
     }
    },
    "mcpToolPrefix": "Playwright",
@@ -225,10 +229,12 @@
    "version": "1.0.1",
    "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/mobile-v1.0.1/mobile-mcp-bundle-1.0.1.tgz",
    "tarballSha256": "a544838d9e6cac450c7e3e797511868af9ab1a305f44db6470125c9a342f14f5",
+   "downloadBytes": 33809732,
    "tarballs": {
     "darwin-arm64": {
      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/mobile-v1.0.1/mobile-mcp-bundle-1.0.1-darwin-arm64.tgz",
-     "tarballSha256": "1d880a0df19c4655b2d2652e2f9f5d68932954804884c318ef47b6c304c64459"
+     "tarballSha256": "1d880a0df19c4655b2d2652e2f9f5d68932954804884c318ef47b6c304c64459",
+     "downloadBytes": 34544460
     }
    },
    "mcpToolPrefix": "Mobile",
@@ -250,10 +256,12 @@
    "version": "1.1.0",
    "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-ping-v1.1.0/nova-ping-bundle-1.1.0.tgz",
    "tarballSha256": "fdc3cd60a7a337ac5a00a0ae157b917447d35e6defc85545d76d27f053af30d1",
+   "downloadBytes": 12180,
    "tarballs": {
     "darwin-arm64": {
      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-ping-v1.1.0/nova-ping-bundle-1.1.0.tgz",
-     "tarballSha256": "fdc3cd60a7a337ac5a00a0ae157b917447d35e6defc85545d76d27f053af30d1"
+     "tarballSha256": "fdc3cd60a7a337ac5a00a0ae157b917447d35e6defc85545d76d27f053af30d1",
+     "downloadBytes": 12180
     }
    },
    "mcpToolPrefix": "NovaPing",
