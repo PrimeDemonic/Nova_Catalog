@@ -43,6 +43,30 @@
    "releaseSummary": "Feature release over 4.12.0, including the unannounced 4.12.1/4.12.2 patches (telemetry only). Glide stays 27.0.5, Node stays >=20.18.0, and none of the command flags or output lines Nova reads changed. NEW: a DatabaseView API (sys_db_view; author from the type file, because the release-note example does not compile); playbook variants, a Go Back activity, isIdealPath branches, action overrides, image attachments and public playbooks; indexes on augmented tables; Flow endFlow inside Catch; `--timeout` (default 3600 s) on `download` and `transform`; a new `now-sdk query <table>` command; `auth --add --password-stdin` for non-interactive adds; and MFA code prompts for basic-auth logins in an interactive terminal only (agent sessions and Nova's checks have no terminal, so keep using OAuth on MFA instances). FIXED: OAuth installs no longer replay session cookies, and an upload the instance redirects now fails with 'The install request was redirected away from the upload endpoint… The app was not installed' instead of reporting success; generated email notifications accept $meta, so Nova's strip-notification-meta step retires itself; augmenting a table no longer resets its access flags; column hint/help/plural serialise correctly. Expect emission diffs on the first 4.13.0 rebuild (sys_db_object access flags, sys_documentation). VERIFIED on the bundled binary: `now-sdk --version` reports 4.13.0 (glide 27.0.5); `install --help` is unchanged from 4.12.0 (`--source`, `-r`, `-a/--auth`, `--async` default true, `--demoData`, `--skip-flow-activation`); `download --help` and `transform --help` list `--timeout`; `auth --help` lists `--print`/`--format` and `--password-stdin`. npm still tags 4.12.2 as `latest` and 4.13.0 as `next`; the bundle pins 4.13.0 exactly."
   }
  ],
+ "sdkBundlesV2": [
+  {
+   "id": "servicenow-sdk",
+   "displayName": "Fluent SDK",
+   "shortLabel": "SDK",
+   "description": "Lets Claude build and deploy scoped applications as code, including flows, playbooks, tables, access controls and integrations. Nova downloads it once for this machine; switch it on in each project that uses it.",
+   "technicalNotes": "Bundled @servicenow/sdk + @servicenow/glide for authoring Flow Designer flows, Playbooks, Script Includes, ACLs, REST Messages, Connection Aliases, and more declaratively in TypeScript.",
+   "version": "4.14.2",
+   "glideVersion": "27.0.5",
+   "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.14.2/sdk-bundle-4.14.2.tgz",
+   "tarballSha256": "d6d9f47c455964d7c63760e6bf288adcb0277bf859ec8716a350245f4aedc0b4",
+   "downloadBytes": 74960171,
+   "tarballs": {
+    "darwin-arm64": {
+     "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/sdk-v4.14.2/sdk-bundle-4.14.2-darwin-arm64.tgz",
+     "tarballSha256": "f0a2685023ad37708183743e3ff4151b6d6b6474dd674e98876bfbe7cff0aca5",
+     "downloadBytes": 74819716
+    }
+   },
+   "minimumGuiVersion": "4.33.0",
+   "targetReleaseFamily": "yokohama",
+   "releaseSummary": "Feature release over 4.13.x (4.14.0 was never offered). Glide stays 27.0.5. Saved logins move to an encrypted file with its key in the keychain; your existing logins are copied across on first use and the old entry is left as it is, so projects on 4.13 keep working. NEW: a UiMacro API (sys_ui_macro), reusable ATF tests (isReusable, inputs/outputs), arrayDenormalized and referenceQualCondition columns, Table.basePolicy and per-role protectionPolicy on Acl, domain on Assessment/RiskAssessment, `explain --range`, `init --timeout`, and `now-sdk exec` (Nova refuses it: use execute_background_script, where the guards apply). Fixes include transform on apps with UI pages (the UI prebuild now runs first), stable transform and build output across runs, faster builds of very large apps, the AIUX ACL path on Windows, sys_ui_message records, sys_app vendor and the RestApi default URI. A sub-project that installs its own SDK must not stay on exactly 4.14.0: it cannot read logins saved by 4.14.2. Upstream notes: https://github.com/ServiceNow/sdk/releases/tag/v4.14.2"
+  }
+ ],
  "servers": [
   {
    "id": "playwright",
