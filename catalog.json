@@ -184,10 +184,12 @@
    "version": "9.0.1",
    "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-recorder-v9.0.1/nova-recorder-bundle-9.0.1.tgz",
    "tarballSha256": "afa6c9a63a718f9979c44bae65b0b26a87126aece743c89bb91ae65e0cee2445",
+   "downloadBytes": 75401933,
    "tarballs": {
     "darwin-arm64": {
      "tarballUrl": "https://github.com/PrimeDemonic/Nova_Catalog/releases/download/nova-recorder-v9.0.1/nova-recorder-bundle-9.0.1-darwin-arm64.tgz",
-     "tarballSha256": "30c477cac3af25b4c217b342243ce35d7af73560286a10110899c2d2d07df271"
+     "tarballSha256": "30c477cac3af25b4c217b342243ce35d7af73560286a10110899c2d2d07df271",
+     "downloadBytes": 38195208
     }
    },
    "mcpToolPrefix": "NovaRecorder",
